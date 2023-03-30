@@ -1,15 +1,7 @@
 {% extends "base.html"  %}
+{% block page_title  %} Course {% endblock %}
+{% block page_head  %} Favorite Courses {% endblock %}
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>favorite-courses</title>
-</head>
-<h1>Favorite Courses</h1>
-<body>
+{% block page_content  %}
 <p> You entered your favorite course as: {{ request.args.get('subject') }} {{ request.args.get('course_number') }} </p>
-<ul>
-
-</ul>
-</body>
-</html>
+{% endblock %}
