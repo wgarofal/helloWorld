@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Contact Form</h1>
+
+        {%  if form_submitted %}
+            <div class="col-12">
+                <h2>Thank you for completing the form</h2>
+            </div>
+            <div class="col-md-6">
+                <p>First Name:</p>
+            </div>
+            <div class="col-md-6">
+                <p>{{  request.form.get('first_name')}}</p>
+            </div>
+            <div class="col-md-6">
+                <p>Last Name:</p>
+            </div>
+            <div class="col-md-6">
+                <p>{{  request.form.get('last_name')}}</p>
+            </div>
+            <div class="col-md-6">
+                <p>Email:</p>
+            </div>
+            <div class="col-md-6">
+                <p>{{  request.form.get('email')}}</p>
+            </div>
+            <div class="col-md-6">
+                <p>Favorite Hobby:</p>
+            </div>
+            <div class="col-md-6">
+                <p>{{  request.form.get('hobby')}}</p>
+            </div>
+    </div>
+
+</body>
+</html>

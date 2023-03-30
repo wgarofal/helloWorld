@@ -18,6 +18,17 @@ def favorite_courses():
 
     return render_template('favorite-courses.html')
 
+@app.route('/contact', methods=['GET', 'POST'] )
+def contact():
+    if request.method == 'POST':
+        print('First name entered: ' + request.form.get('first_name'))
+        print('Last name entered: ' + request.form.get('last_name'))
+        print('Email entered: ' + request.form.get('email'))
+        print('Favorite hobby entered: ' + request.form.get('hobby'))
+
+    return render_template('contact.html')
+
+
 @app.route('/about')
 def about():
     return render_template('about.html')
