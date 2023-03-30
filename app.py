@@ -14,7 +14,7 @@ def hello():
 @app.route('/favorite-courses')
 def favorite_courses():
 
-    print('You entered your favorite course as:' + request.args.get('subject'))
+    print('You entered your favorite course as:' + request.args.get('subject') + request.args.get('course_number'))
 
     return render_template('favorite-courses.html')
 
