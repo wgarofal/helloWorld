@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block page_title %} View All Students {% endblock %} {% block page_head %} View All Students {% endblock %} {% block page_content %}
+{% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
+{{ message }}
+{% endfor %} {% endif %} {% endwith %} {% for each_student, each_major in students %} {% endfor %}
+Last Name	First Name	Major	Is Honors?	Actions
+{{ each_student['last_name'] }}	{{ each_student['first_name'] }}	{{ each_major['major'] }}	{{ 'Yes' if each_student['is_honors'] == 1 else 'No' }}	Edit   Delete
+Total Number of Students: {{ students|length }}
+Add New Student
+{% endblock %}
