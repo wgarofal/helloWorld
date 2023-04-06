@@ -45,6 +45,7 @@ def student_create():
     elif request.method == 'POST':
         first_name = request.form['first_name']
         last_name = request.form['last_name']
+        email = request.form['email']
         major_id = request.form['major_id']
 
         birth_date = request.form['birth_date']
@@ -82,6 +83,7 @@ def student_edit(student_id):
             student.first_name = request.form['first_name']
             student.last_name = request.form['last_name']
             student.major_id = request.form['major_id']
+            student.email = request.form['email']
             student.birthdate = dt.strptime(request.form['birth_date'], '%Y-%m-%d')
             student.num_credits_completed = request.form['num_credits_completed']
             student.gpa = request.form['gpa']
