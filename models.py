@@ -40,4 +40,3 @@ class Major(db.Model):
 
     # Only execute once! Initial load of majors
     #db.engine.execute("INSERT INTO major(major) VALUES ('Accounting');")
-
